@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	html
+{scroll-behavior: smooth;}
+body{
+	background-color:rgba(190,190,190,0.1);
+	 line-height: 1.5;
+	 font-family: 'Open Sans',Arial,sans-serif;
+	 background:linear-gradient(90deg,#F0F0F0,#F8F8F8);
+}
+#navbar{
+	min-width: 290px;
+	width: 200px;
+	height:100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(224,224,224,0.5);
+	border:1px solid  rgba(224,224,224,0.5);
+	border-radius: 10px;
+}
+#nav-header{
+	width: 290px;
+	height: 50px;
+	font-size: 1.8em;
+	color: black;
+
+    padding-top: 10px;
+    text-align: center;
+    font-weight:thin;
+}
+#navbar ul{
+margin-left: 0px;
+
+}
+#navbar ul li{
+list-style-type: none; 
+width: 290px;
+text-align:left;
+padding-left:0px;
+padding-top: 10px;
+}
+
+.nav-link{
+	text-decoration:none;
+	color: black;
+	font-size:20px; 
+	cursor:pointer;
+	width: 290px;
+}
+.link:hover{
+	background-color: blue;
+}
+main#main-doc{
+	
+	position: absolute;
+	top:0px;
+	left:290px; 
+}
+section header{
+  color:black;
+  font-size: 29px;
+  margin:10px;
+  text-align:left;
+  font-weight:thin;
+  margin-left: 50px;
+}
+p{
+	font-size: 15px;
+}
+ article{
+  margin-left: 70px;
+  margin-top: 10px;
+    font-size:17px;
+}
+code{
+	display: block;
+	background-color:rgba(208,208,208,0.3);
+	position: relative;
+	max-height: 340px;
+	margin-right: 30px;
+    border-radius: 20px;
+    padding: 25px;
+}
+@media (max-width: 700px){
+	body {
+		display: grid;
+		grid-template-columns: 0;
+		grid-template-rows: auto 1fr ;
+		grid-template-areas: "nav1"  "main1";
+	}
+
+	#navbar {
+		grid-area: nav1;
+		position: relative;
+		width: 95vw;
+		text-align: center;
+			}
+
+
+	#main-doc{
+	grid-area: main1;
+	width: 95vw;
+}
+#navbar header, #navbar ul li {
+	padding: 10px 20px;
+}
+
+}
+</style>
+</head>
+<body>
+<nav id="navbar">
+		<header id="nav-header">PHP  Documentation</header>
+		<ul>
+		<a href="#PHP_Introduction" class="nav-link" rel="internal"><li  class="nav-item">PHP Introduction</li></a>
+		<a href="#PHP_Install"  class="nav-link" rel="internal"><li class="nav-item">PHP Install</li></a>
+		<a href="#PHP_Syntax"  class="nav-link" rel="internal"><li class="nav-item">PHP Syntax</li></a>
+		<a href="#Creating_Declaring_PHP_Variables" class="nav-link" rel="internal"><li class="nav-item">Creating Declaring PHP Variables</li></a>
+		<a href="#PHP_Echo_or_Print"  class="nav-link" rel="internal"><li class="nav-item">PHP Echo or Print</li></a>
+		<a href="#PHP_Data_Types" class="nav-link" rel="internal"><li class="nav-item">PHP Data Types</li></a>
+		<a href="#PHP_if_else_elseif_Statements"    class="nav-link"rel="internal"><li class="nav-item">PHP if else elseif Statements</li></a>
+		<a href="#Switch_Statement"  class="nav-link" rel="internal"><li class="nav-item">Switch Statement</li></a>
+		<a href="#PHP_while" class="nav-link" rel="internal"><li class="nav-item">PHP while</li></a>
+		<a href="#For_Loop" class="nav-link" rel="internal"><li class="nav-item">For Loop</li></a>
+		<a href="#Functions"class="nav-link" rel="internal"><li class="nav-item">Functions</li></a>
+		<a href="#Arrays" class="nav-link" rel="internal"><li class="nav-item">Arrays</li></a>
+		<a href="#Reference" class="nav-link" rel="internal"><li class="nav-item">Reference</li></a>
+		</ul>
+	</nav>
+	<!--   main document section -->
+	<main id="main-doc">
+		<section class=" main-section" id="PHP_Introduction">
+			<header>PHP Introduction</header>
+			<article>
+					<p>PHP is a programming language for building dynamic, interactive Web sites. As a general rule, PHP
+	programs run on a Web server, and serve Web pages to visitors on request. One of the key features
+	of PHP is that you can embed PHP code within HTML Web pages, making it very easy for you to
+	create dynamic content quickly.</p>
+	<p>What exactly does the phrase “ dynamic, interactive Web sites ” mean? A dynamic Web page is a
+	page whose contents can change automatically each time the page is viewed. <p>Contrast this with a
+	static Web page, such as a simple HTML file, which looks the same each time it ’ s displayed (at least
+	until the page is next edited).</p><p> Meanwhile, an interactive Web site is a site that responds to input
+	from its visitors. A Web forum is a good example — users can post new messages to the forum,
+	which are then displayed on the site for all to see. Another simple example is a “ contact us ” form,</p>
+			</article>
+		</section>
+		<section class=" main-section" id="PHP_Install">
+			<header>PHP Install</header>
+			<article>
+				<h3>What Do I Need?</h3>
+						<p>To start using PHP, you can:</p>
+							<ul>
+								<li>Find a web host with PHP and MySQL support</li>
+								<li>Install a web server on your own PC, and then install PHP and MySQL</li>
+							</ul>
+					<h3>Use a Web Host With PHP Support</h3>
+					    <p>If your server has activated support for PHP you do not need to do anything.
+                           Just create some .php files, place them in your web directory, and the server will automatically parse them for you.</p>
+
+                        <p>You do not need to compile anything or install any extra tools.
+                         Because PHP is free, most web hosts offer PHP support.</p>
+                <h3>Set Up PHP on Your Own PC</h3>
+                <p>However,if your server does not support PHP,you must:</p>
+                	<ul>
+                		<li>install a web server</li>
+                		<li>install PHP</li>
+                		<li>install a database, such as MySQL</li>
+                	</ul>
+			</article>
+		</section>
+		<section  class="  main-section"  id="PHP_Syntax">
+			<header>PHP Syntax</header>
+			<article>
+				<p>A PHP script can be placed anywhere in the document.</p>
+				<code>
+            &lt;php<br>
+            echo "Hello World!";<br>
+             ?>					
+         </code>
+     </article>
+		</section>
+		<section class=" main-section" id="Creating_Declaring_PHP_Variables">
+			<header>Creating Declaring PHP Variables</header>
+			<article>
+				<p>In PHP, a variable starts with the $ sign, followed by the name of the variable:</p>
+				<code>
+					&lt;?php<br>
+                    $txt = "Hello world!";<br>
+                   $x = 5;<br>
+                   $y = 10.5;<br>
+                   ?>	</code>
+<p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).Rules for PHP variables:
+                   </p>		
+<ul>
+				<li>A variable starts with the $ sign, followed by the name of the variable</li>
+				<li>A variable name must start with a letter or the underscore character</li>
+				<li>A variable name cannot start with a number</li>
+				<li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+				<li>Variable names are case-sensitive ($age and $AGE are two different variables)</li>
+			</ul>
+			</article>
+		</section>
+		<section class=" main-section" id="PHP_Echo_or_Print">
+			<header>PHP Echo or Print</header>
+			<article>
+				<p>In PHP there are two basic ways to get output: echo and print.</p>
+				<p>echo and print are more or less the same. They are both used to output data to the screen.
+The differences are small: echo has no return value while print has a return value of 1 so it can be used in expressions. echo can take multiple parameters (although such usage is rare) while print can take one argument. echo is marginally faster than print.</p>
+			
+			<code>
+				&lt;?php
+                 echo "<h2>PHP is Fun!</h2>";
+                  echo "Hello world!<br>";
+                   print "I'm about to learn PHP!<br>";
+                  echo "This ", "string ", "was ", "made ", "with multiple parameters.";
+                   ?>
+			</code>	
+			</article>		
+		</section>
+		<section id="PHP_Data_Types" class=" main-section">
+			<header>PHP Data Types</header>
+			<article>
+				<p>Variables can store data of different types, and different data types can do different things.
+                 PHP supports the following data types:</p>
+                 <ul>
+                 	<li>Strings</li>
+                 	<li>Integer</li>
+                 	<li>Float (floating point numbers - also called double)</li>
+                 	<li>Boolean</li>
+                 	<li>Array</li>
+                 	<li>Object</li>
+                 	<li>NULL</li>
+                 	<li>Resource</li>
+                 </ul>
+			</article>
+		</section>
+		<section class=" main-section" id="PHP_if_else_elseif_Statements">
+			<header>PHP if else elseif Statements</header>
+			<article>
+				<h3>PHP Conditional Statements</h3>
+				<p>	Very often when you write code, you want to perform different actions for different conditions. You can use conditional statements in your code to do this.</p>   
+					<p>In PHP we have the following conditional statements:</p>
+					<ul>
+						<li>if statement - executes some code if one condition is true</li>
+					<div class="code-div">
+							<code class="code">
+						if (condition) {<br>
+                    code to be executed if condition is true;<br>
+                         }<br>
+					</code>
+				</div>
+						<li>if...else statement - executes some code if a condition is true and another code if that condition is false</li>
+						<code>
+							if (condition) {<br>
+    code to be executed if condition is true;<br>
+} else {<br>
+    code to be executed if condition is false;<br>
+             }
+						</code>
+						<li>if...elseif....else statement - executes different codes for more than two conditions</li>
+						<code>
+							if (condition) {<br>
+    code to be executed if this condition is true;<br>
+} elseif (condition) {<br>
+    code to be executed if this condition is true;<br>
+} else {<br>
+    code to be executed if all conditions are false;<br>
+}
+						</code>
+					</ul>
+			</article>
+		</section>
+		<section class=" main-section" id="Switch_Statement">
+			<header>Switch Statement</header>
+			<article>
+				<p>The switch statement is used to perform different actions based on different conditions.<br>
+				Use the switch statement to select one of many blocks of code to be executed.</p>
+			
+			<code>
+				switch (n) {<br>
+    case label1:<br>
+        code to be executed if n=label1;<br>
+        break;<br>
+    case label2:<br>
+        code to be executed if n=label2;<br>
+        break;<br>
+    case label3:<br>
+        code to be executed if n=label3;<br>
+        break;<br>
+    ...<br>
+    default:<br>
+        code to be executed if n is different from all labels;<br>
+}			</code>
+				</article>
+		</section>
+		<section class=" main-section" id="PHP_while">
+			<header>PHP while</header>
+			<article>
+			<p>The while loop executes a block of code as long as the specified condition is true.</p>
+			
+			<code>
+				while (condition is true) {<br>
+    code to be executed;<br>
+}
+			</code>
+			</article>
+		</section>
+		<section class=" main-section" id="For_Loop">
+			<header>For Loop</header>
+			<article>
+				<p>PHP for loops execute a block of code a specified number of times.<br>
+					The for loop is used when you know in advance how many times the script should run.</p>
+			
+			<code>
+				for (init counter; test counter; increment counter) {<br>
+    code to be executed;
+}</code></article>
+		</section>
+		<section class=" main-section" id="Functions">
+			<header>Functions</header>
+			<article>
+				<p>The real power of PHP comes from its functions; it has more than 1000 built-in functions.</p>
+				<h3>PHP User Defined Functions</h3>
+				<p>Besides the built-in PHP functions, we can create our own functions.<br>
+					A function is a block of statements that can be used repeatedly in a program.<br>
+					A function will not execute immediately when a page loads.<br>
+					A function will be executed by a call to the function.</p>
+             <h3>Create a User Defined Function in PHP</h3>
+             <p>A user defined function declaration starts with the word "function":</p>
+             <h4>Syntax</h4>
+             <code>
+             	function functionName() {<br>
+    			code to be executed;}
+			</code>
+				<h3>PHP Function Arguments</h3>
+				<article>
+					<p>Information can be passed to functions through arguments. An argument is just like a variable.<br>
+                      Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.</p>
+                      <code>
+                      	 &lt;?php
+                            function familyName($fname) {<br>
+                            echo "$fname Refsnes.<br>";
+                            }<br>
+
+                            familyName("Jani");<br>
+                            familyName("Hege");<br>
+                            familyName("Stale");<br>
+                            familyName("Kai Jim");<br>
+                            familyName("Borge");<br>
+                            ?>
+                      </code>
+                      <h3>PHP Functions - Returning values</h3>
+                      <p>To let a function return a value, use the return statement: </p>
+                      <code>
+                      	&lt;?php<br>
+                       function sum($x, $y) {<br>
+                                  $z = $x + $y;<br>
+                                  return $z;<br>
+                                  }<br>
+
+                             echo "5 + 10 = " . sum(5, 10) . "<br>";
+                             echo "7 + 13 = " . sum(7, 13) . "<br>";
+                             echo "2 + 4 = " . sum(2, 4);<br>
+                             ?></code>
+				</article>
+			</article>
+		</section>
+		<section class=" main-section" id="Arrays">
+			<header>Arrays</header>
+			<article>
+			<p>An array is a special variable, which can hold more than one value at a time:
+		      </p>
+				<code>
+				&lt;?php<br>
+               $cars = array("Volvo", "BMW", "Toyota");<br>
+               echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";<br>
+                ?>
+			    </code>
+			</article>
+		</section>
+		<section class="main-section" id="Reference">
+			<header>Reference</header>
+			<article>
+				<li>All the documentation in this page is taken from <a href="https://www.w3schools.com/php/php_arrays.html" target="_blank">w3schools</a></li>
+			</article>
+		</section>
+	</main>
+</body>
+</html>

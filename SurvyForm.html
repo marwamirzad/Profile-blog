@@ -1,0 +1,275 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+body{
+	
+	background-color: lightblue;
+	 text-align: center;
+	  font-family: 'Raleway', Helvetica, sans-serif;
+	  
+
+}
+h1{
+	font-family: Helvetica, sans-serif;
+	color: white;
+	font-size: 2em;
+
+}
+#container{
+	width: 80%;
+	max-width: 900px;
+	background-color:  rgba(250, 250, 250,0.5);
+	margin: 0 auto;
+	border-radius: 5px;
+	padding: 20px;
+}
+.form-element{
+   display: flex;
+   padding-left: 20px;
+}
+ .labels{
+  text-align:left;
+  margin-left: 40px;
+  display: inline-block;
+  margin-top: 10px;
+
+
+ }
+ .inputs{/*  div of input-field   */
+ 	text-align:left;
+ 	width: 50%;
+ 	padding-left: 20px;
+
+
+ }
+ .input-fieds{/*  inputs for name email and age */
+ 	height: 20px;
+ 	width: 280px;
+ 	border: 1px solid #c0c0c0;
+ 	border-radius: 15px;
+ 	padding:5px;
+ 	margin: 10px;
+ }
+ input[type= radio]{
+ 	 margin-top: 15px; 
+ }
+
+  .seconds-labels{
+  text-align:left;
+  margin-left: 40px;
+  display: inline-block;
+  margin-top: 15px;
+ }
+.question-radio-inputs{
+    width: 200px;
+    margin-left: 75px;
+    text-align:left;
+}
+.question-radio{
+	margin-left: 10px;
+}
+
+.question-labels{
+	margin-left: 10px;
+}
+.question-checkbox-inputs{
+	text-align: left;
+	margin-left: 75px;
+	margin-top: 10px;
+}
+.checkbox-inputs{
+	margin: 8px;
+}
+.question-dropdown-list{
+	margin-left: 75px;
+	margin-top: 15px;
+	text-align: left;
+
+}
+#dropdown{
+	height:40px;
+	width: 200px;
+	text-align: left;
+	border: 1px solid #c0c0c0;
+	border-radius: 5px;
+	
+}
+.textarea{
+	margin-left: 75px;
+	margin-top: 15px;
+	text-align: left;
+	width: 250px;
+}
+#submit-button{
+margin-left: 75px;
+	margin-top: 15px;
+	text-align: left;
+	width: 200px;
+}
+#submit{
+ background-color: white; 
+ width: 200px;
+  height: 30px; 
+  border-radius: 15px;
+  }
+  @media screen and (max-width: 900px) {
+  .input-fieds {
+    width: 90%;
+  }
+  select {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+  .inputs {
+    width: 80%;
+    float: left;
+  }
+  .input-fieds {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+}
+	</style>
+</head>
+<body>
+<h1 id="title">Survey on Radio Advertisement</h1>
+		<div id="container">
+			<p id="description">Survey to examine the effectiveness of Radio advertisment.</p>
+      <form   id="survey-form"  method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+				<!-- name fied is opened -->
+				<div class="form-element">
+					<div  class="labels"  >
+						<label id="name-label" for="name">Name:</label>
+					</div>
+					<div class="inputs">
+						<input type="text" name="name" id="name" placeholder="Enter your name" autofocus required class="input-fieds">
+					</div>
+				</div>
+					<!-- name fied is closed -->
+					<!-- email field is opened -->
+				<div class="form-element">
+					<div  class="labels"  >
+						<label id="email-label" for="email">Email:</label>
+					</div>
+					<div class="inputs">
+						<input type="email" name="email" id="email" placeholder="Enter your email"   class="input-fieds" required>
+					</div>
+			    </div>
+				<!-- email field is opened -->
+				<!-- age field is opened -->
+				<div class="form-element">
+					<div class="labels"  >
+						<label id="number-label" for="number">Age:</label>
+					</div>
+					<div class="inputs">
+						<input type="number" name="age" id="number" min="1" max="100" class="input-fieds" placeholder="Age" >
+					</div>
+			    </div>
+				<!-- email field is opened -->
+		
+        		<div class="form-element">
+					<div class="labels"  >
+						<label id="gender-label" for="gender">Gender:</label>
+					</div><br>
+					<div class="inputs">
+						<input type="Radio" name="gender" id="f-gender"  value="female" ><lable>Female</label>
+						<input type="Radio" name="gender" id="m-gender" value="male"  ><label>Male</label>
+					</div>
+			    </div>
+        
+			    <div class="form-element">
+			    	<div class="seconds-labels">
+			    		<label>1-How many hours a week, on average, do you spend listening to the radio?</label>
+			    	</div>
+			    </div>
+			  
+     <div class="question-radio-part">
+		<div class="question-radio-inputs">
+      <input name="radio-buttons" value="1"  type="radio"  class="question-radio">
+<label class="question-labels">6-10houre</label><br>
+<input type="radio"   name="radio-buttons" value="2" class="question-radio"><label class="question-labels">10-15houre</label><br>
+<input type="radio"  name="radio-buttons" value="3" class="question-radio"><label class="question-labels">10-15houre</label><br>
+<input type="radio"  name="radio-buttons" value="4" class="question-radio"><label class="question-labels">16&nbsp;+&nbsp;houre</label><br>
+			   </div>
+			 </div>   
+         <div class="form-element">
+    <div class="seconds-labels">
+    <label>2-Do you desire for the product which is advertised on radio?</label>
+	</div>
+	</div>
+	<div class="question-radio-inputs">
+	    <input type="Radio" name="radio-buttons"   value="yes" ><label>Yes</label>
+		<input type="Radio" name="radio-buttons"  value="no"  ><label>No</label>
+	</div>
+        
+        <div class="form-element">
+			    	<div class="seconds-labels">
+			    		<label>3-Do you think advertisements on radio provides with information you needed?</label>
+			    	</div>
+			    </div>
+			     <div class="question-radio-inputs">
+						<input type="Radio" name="radio-buttons"  value="yes" ><label>Yes</label>
+						<input type="Radio" name="radio-buttons"  value="no"  ><label>No</label>
+				</div>
+        
+        	<div class="form-element">
+			    	<div class="seconds-labels">
+			    		<label>4-Radio advertisements help to make better selection.</label>
+			    	</div>
+			    </div>
+			     <div class="question-radio-inputs">
+						<input type="Radio" name="radio-buttons"   value="yes" ><label>Yes</label>
+						<input type="Radio" name="radio-buttons"  value="no"  ><label>No</label>
+				</div>
+			   
+        
+        
+					 <div class="form-element">
+			    	<div class="seconds-labels">
+			    		<label>5-What do you think about advertising on the radio?</label>
+			    	</div>
+			    </div>
+			    <div class="question-checkbox-inputs">
+			    	<input type="checkbox"  name="question" class="checkbox-inputs"  value="1"><label>I don’t mind advertising in general</label><br> <input type="checkbox"   value="2"name="question" class="checkbox-inputs"><label>I don’t mind advertising as long as it targets my profile like age, gender</label><br>
+			    	<input type="checkbox"  value="3" name="question" class="checkbox-inputs"><label>There is nothing about advertising </label><br>
+			    	<input type="checkbox"  value="4" name="question" class="checkbox-inputs"><label>I don’t mind advertising in general</label><br>
+			    </div>
+			    <div class="form-element">
+			    	<div  class="seconds-labels">
+			    	<label>6-According to you which of the following medium of advertising displays its messages perfectly without wasting your time?</label>
+			    </div></div>
+			    <div class="question-dropdown-list">
+			    	<select  id="dropdown">
+			    		<option disabled selected  value="select an option">select an option</option>
+			    		<option value="Radio">Radio</option>
+			    		<option value="Television">Television </option>
+			    		<option value="Newspaper">Newspaper</option>
+			    		<option value="internet">internet</option>
+			    	</select>
+			    </div>
+			    <div class="form-element">
+			    	<div  class="seconds-labels">
+			    	<label>7-According your idea how can we improve our radio advertismenet comment your idea</label>
+			    	</div>
+			    </div>
+			    <div class="textarea">
+			    	 <textarea id="comment" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+			    </div>
+			    <div  id="submit-button">
+			    	<input type="submit" name="submit"  id="submit">
+			    </div> 
+			</form>
+		</div>
+</body>
+</html>
