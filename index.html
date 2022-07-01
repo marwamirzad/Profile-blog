@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.intro{
+    top: 0;
+ background-color: #ffcc00;
+  min-height: 55vh;
+  padding-top: 45vh;
+}
+
+nav ul {
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  background-color: #ff9900;
+}
+nav ul li {
+  display: inline-block;
+  margin: 55px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  list-style-type: none;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+#a{
+   text-decoration: underline;
+   font-size: bold;
+}
+.project-pic{
+border:1px solid;
+border-radius: 10px;
+width: 300px;
+height: 300px;
+}
+
+.work {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
+.work-header{
+margin-top: 45px;
+}
+
+.project {
+  text-decoration: none;
+  color:black;
+  display: inline-block;
+  height: 250px;
+  width: 300px;
+  margin: 50px 100px;
+}
+.contact {
+  background:#ffcc00;
+  padding-bottom: 180px;
+}
+
+.contact-info {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 35px 45px 35px;
+  list-style-type: none;
+  border: 2px solid #ffcc00;;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: #ff9900;
+  color: black;
+  text-decoration: none;
+}
+
+
+footer {
+  padding: 20px;
+  background:  #ff9900;
+  color:black;
+  line-height: 40px;
+}
+
+
+@media only screen and (max-width: 500px) {
+  nav ul {
+    text-align: center;
+  }
+  nav ul li {
+    margin: 20px;
+  }
+  .project {
+    margin: 40px 0;
+  }
+}
+@media only screen and (max-width: 367px) {
+  .contact-info {
+    border: 2px solid #90C695;
+    border-radius: 0;
+    width: 90px;
+    height: 20px;
+    padding: 10px;
+    line-height: normal;
+  }
+}
+  </style>
+</head>
+<body>
+  
+<nav>
+  <ul id='navbar'>
+    <li><a href="#welcome-section">About</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  </nav>
+  <div id="welcome-section" class="intro">
+  <h1>Hey i'am Marwa.</h1>
+  <p >a<i> <b>PHP developer</b></i></p>
+  <P>I enjoy writing PHP code and documentation on web development. My main interest is creating a Web Application and uploading its code to the Public For everyone.I also have a <a href="PHPDocumentation.html" id="a"><b>PHP Documentation</b></a>  where i document PHP tutorials.</P>
+</div>
+<div id="projects" class="work">
+   <h2 class="work-header">These are some of my projects..</h2>
+   <a href="https://codepen.io/marwamirzad/pen/pYyLXb" target="_blank" class="project project-tile">
+    <img class="project-pic" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg" alt="project">
+    <div class="project-tile">Tribute Page</div>
+     </a>
+  <a href="https://codepen.io/marwamirzad/pen/OqNZNL" target="_blank" class="project project-tile">
+    <img class="project-pic" src="http://www.shreeshardacommunication.com/images/slider/1.jpg" alt="project">
+    <div class=" project-tile">Survey Form</div>
+  </a>
+   <a href="https://codepen.io/marwamirzad/pen/qvmrPO " target="_blank" class="project project-tile">
+    <img class="project-pic" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/PHP_Logo.png" alt="project">
+    <div class=" project-tile">PHP Documentation</div>
+  </a>
+    <a href="https://codepen.io/marwamirzad/pen/eXWGgJ" target="_blank" class="project project-tile">
+    <img class="project-pic" src="https://www.verticalresponse.com/blog/wp-content/uploads/2013/04/Company-Profile.jpg" alt="project">
+    <div class=" project-tile">Product Landing Page</div>
+</div>
+<div id="contact" class="contact">
+  <div class="header">
+    <h1>Let's work together...</h1><br>
+  </div>
+  <a href="#" target="_blank" class="contact-info">Facebook</a>
+  <a id='profile-link' href="https://github.com/freecodecamp" target="_blank" class="contact-info">Inatagram</a>
+  <a href="https://twitter.com/freecodecamp" target="_blank" class="contact-info">Twitter</a>
+  <a href="mailto:example@example.com" class="contact-info">Send a mail</a>
+  <a href="tel:555-555-5555" class="contact-info">Call me</a>
+</div>
+<footer>This is my own profile </footer>
+
+</body>
+</html>
